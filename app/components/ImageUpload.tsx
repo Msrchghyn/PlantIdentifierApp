@@ -188,13 +188,13 @@ export default function PlantIdentifierApp() {
             <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-4">
               <button
                 onClick={capturePhoto}
-                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-300 text-sm"
+                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-300 text-xs"
               >
                 Capture
               </button>
               <button
                 onClick={switchCamera}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-sm"
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-xs"
               >
                 <RotateCcw className="w-4 h-4 inline mr-1" />
                 Switch
@@ -220,9 +220,9 @@ export default function PlantIdentifierApp() {
           />
           <h2 className="text-xl md:text-2xl font-bold text-green-800 mb-2">{plantInfo.name || 'Unknown Plant'}</h2>
           <p className="italic text-green-600 mb-2">{plantInfo.scientificName}</p>
-          <p className="text-gray-700 mb-2">{plantInfo.description}</p>
+          <p className="text-gray-700 mb-2 text-xs">{plantInfo.description}</p>
           <table className="w-full border-collapse">
-            <tbody>
+            <tbody className='text-xs'>
               <tr className="border-b">
                 <td className="py-2 pr-4 font-semibold">Family:</td>
                 <td className="py-2">{plantInfo.family || 'Unknown'}</td>
